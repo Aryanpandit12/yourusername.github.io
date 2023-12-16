@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Webpage Title</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: red;
+    }
+
+    #userForm {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #likeSubscribePage {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>This makes you happy ❤️</h1>
+
+  <form id="userForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <button type="button" onclick="submitForm()">Enter</button>
+  </form>
+
+  <div id="likeSubscribePage">
+    <p>Like and Subscribe!</p>
+    <button onclick="redirectToYouTube()">Enter</button>
+  </div>
+
+  <script>
+    function submitForm() {
+      var fullName = document.getElementById('fullName').value;
+      var age = document.getElementById('age').value;
+
+      if (fullName.trim() === '' || age.trim() === '') {
+        alert('Please fill in all the fields.');
+      } else {
+        document.getElementById('likeSubscribePage').style.display = 'block';
+      }
+    }
+
+    function redirectToYouTube() {
+      window.location.href = 'https://youtube.com/shorts/_m0KjaSr13U?si=Vk4-YhYKxFiWBXnc';
+    }
+  </script>
+
+</body>
+</html>
